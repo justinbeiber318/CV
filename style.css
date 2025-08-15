@@ -92,33 +92,18 @@ blockquote {
 }
 /* Responsive cho điện thoại */
 @media (max-width: 768px) {
-  .cv-container {
-    flex-direction: column;
-  }
-
-  .left-column,
-  .right-column {
-    width: 100%;
-  }
-
   .profile {
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .avatar {
-    width: 70px;
-    height: 70px;
-    flex-shrink: 0;
+    flex-wrap: wrap; /* Cho phép xuống dòng khi không đủ chỗ */
   }
 
   .profile-info {
-    width: 100%;
-    word-break: break-word; /* Ngắt chữ dài */
+    flex: 1 1 100%; /* Chiếm hết 100% chiều ngang khi xuống dòng */
+    text-align: center; /* Căn giữa cho đẹp */
+    word-break: break-word; /* Ngắt chữ dài để không tràn */
   }
 }
+
+
 
 
 
