@@ -33,6 +33,9 @@ body {
 .right-column {
   width: 65%;
   padding: 20px;
+  overflow-wrap: break-word; /* Cho phép xuống dòng khi chữ quá dài */
+  word-break: break-word;    /* Ngắt chữ dài */
+  box-sizing: border-box;
 }
 
 /* Hồ sơ cá nhân */
@@ -118,7 +121,9 @@ blockquote {
   .cv-container {
     flex-direction: column;
   }
-
+ .right-column {
+    width: 100%;
+  }
   .left-column, 
   .right-column {
     width: 100%;
@@ -134,3 +139,4 @@ blockquote {
     font-size: 18px;
   }
 }
+
