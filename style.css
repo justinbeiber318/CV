@@ -93,7 +93,7 @@ blockquote {
 /* Responsive cho điện thoại */
 @media (max-width: 768px) {
   .cv-container {
-    flex-direction: column; /* Xếp chồng dọc */
+    flex-direction: column; /* Xếp cột trái và phải theo chiều dọc */
   }
 
   .left-column, 
@@ -103,13 +103,22 @@ blockquote {
 
   .profile {
     flex-direction: column; /* Avatar và thông tin xếp dọc */
-    align-items: center;
+    align-items: center; /* Căn giữa */
     text-align: center;
+    gap: 10px;
   }
 
   .avatar {
     width: 70px;
     height: 70px;
+    flex-shrink: 0; /* Không bị ép nhỏ hơn */
+  }
+
+  .profile-info {
+    width: 100%; /* Cho text giãn hết chiều ngang */
+    word-break: break-word; /* Nếu từ quá dài thì xuống dòng */
   }
 }
+
+
 
