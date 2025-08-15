@@ -1,19 +1,27 @@
+/* Reset & cấu hình chung */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
   color: #222;
+  line-height: 1.5; /* Giúp chữ thoáng */
 }
 
 .cv-container {
   display: flex;
+  flex-wrap: wrap; /* Cho phép xuống dòng nếu chật */
   max-width: 1000px;
   margin: 20px auto;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Cột trái */
 .left-column {
   width: 35%;
   background-color: #2b3a55;
@@ -21,15 +29,18 @@ body {
   padding: 20px;
 }
 
+/* Cột phải */
 .right-column {
   width: 65%;
   padding: 20px;
 }
 
+/* Hồ sơ cá nhân */
 .profile {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .avatar {
@@ -43,6 +54,19 @@ body {
 .profile-info {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 200px;
+  word-break: break-word; /* Cắt chữ dài */
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.contact {
+  margin: 3px 0;
 }
 
 .contact i {
@@ -50,24 +74,26 @@ body {
   color: #f1c40f;
 }
 
-
+/* Các section */
 .section {
   margin-top: 20px;
 }
-.section ul {
-  padding-left: 20px;
-}
-
-.section li {
-  margin-bottom: 6px;
-}
-
 
 .section h2 {
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 8px;
   color: #f1c40f;
+  text-transform: uppercase;
+}
+
+.section ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.section li {
+  margin-bottom: 6px;
 }
 
 .item {
@@ -79,10 +105,6 @@ body {
   color: #aaa;
 }
 
-ul {
-  padding-left: 20px;
-}
-
 blockquote {
   margin-top: 10px;
   font-style: italic;
@@ -90,22 +112,25 @@ blockquote {
   border-left: 3px solid #f1c40f;
   padding-left: 10px;
 }
+
 /* Responsive cho điện thoại */
 @media (max-width: 768px) {
-  .profile {
-    flex-wrap: wrap; /* Cho phép xuống dòng khi không đủ chỗ */
+  .cv-container {
+    flex-direction: column;
+  }
+
+  .left-column, 
+  .right-column {
+    width: 100%;
   }
 
   .profile-info {
-    flex: 1 1 100%; /* Chiếm hết 100% chiều ngang khi xuống dòng */
-    text-align: center; /* Căn giữa cho đẹp */
-    word-break: break-word; /* Ngắt chữ dài để không tràn */
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .name {
+    font-size: 18px;
   }
 }
-
-
-
-
-
-
-
